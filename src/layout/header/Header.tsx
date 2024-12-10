@@ -37,7 +37,13 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
     background-color: ${theme.colors.primaryBg};
-    padding: 19px 56px 19px 24px;
+    padding: 19px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    opacity: 0.98;
 `
 const IconName = styled.a`
     font-weight: 600;

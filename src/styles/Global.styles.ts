@@ -28,16 +28,28 @@ export const GlobalStyle = createGlobalStyle`
     li {
         list-style: none;
     }
+    
     p{
+        color: ${theme.colors.font};
         font-weight: 500;
         font-size: 18px;
+        line-height: 178%;
     }
 
-    section:nth-of-type(odd) {
-        background-color: ${theme.colors.primaryBg};
-    }
-
-    section:nth-of-type(even) {
+    section{
         background-color: ${theme.colors.secondaryBg};
+    }
+ 
+    button {
+        background-color: unset;
+        border: none;
+        cursor: pointer;
+        color: ${theme.colors.font};
+        font-weight: 600;
+        font-size: 16px;
+        
+        &:hover{
+            background-color: ${theme.colors.accent};
+        }
     }
 `
