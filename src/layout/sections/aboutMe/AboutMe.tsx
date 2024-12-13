@@ -10,13 +10,13 @@ import {Card} from "./aboutCard/Card";
 
 const itemsCard = [
     {title: "UI & UX DESIGNING", iconId: "rulerPen"},
-    {title: "WEB DEVELOPMENT", iconId: "slider"},
-    {title: "MOBILE DEVELOPMENT", iconId: "slider"},
-    {title: "WEB SCRAPING WITH PYTHON", iconId: "rulerPen"},
+    {title: "WEB DEVELOPMENT", iconId: "webDev"},
+    {title: "MOBILE DEVELOPMENT", iconId: "android"},
+    {title: "WEB SCRAPING WITH PYTHON", iconId: "piton"},
 ]
 export const AboutMe = () => {
     return (
-        <StyledAboutMe>
+        <StyledAboutMe id={"aboutMe"}>
             <Container>
                 <Title>About me:</Title>
                 <ImDescription>
@@ -26,12 +26,15 @@ export const AboutMe = () => {
                     design principles.
                     Here are the major skiills i have.
                 </ImDescription>
-                <FlexWrapper justify={"space-between"} align={"center"}>
-                    <QuantityYears>5+</QuantityYears>
-                    <DescriptionSkills>Years of experience. Specialised in building apps, while ensuring a seamless
-                        web experience for end users.
-                    </DescriptionSkills>
-                </FlexWrapper>
+                <Wrapper>
+                    <FlexWrapper justify={"space-between"} align={"center"}>
+                        <QuantityYears>5+</QuantityYears>
+                        <DescriptionSkills>Years of experience. Specialised in building apps, while ensuring a seamless
+                            web experience for end users.
+                        </DescriptionSkills>
+                    </FlexWrapper>
+                </Wrapper>
+
                 <FlexWrapper justify={"space-around"} wrap={"wrap"} gap={"20px"}>
                     {
                         itemsCard.map((card, index) => {
@@ -49,6 +52,11 @@ export const AboutMe = () => {
 const StyledAboutMe = styled.section`
     margin-top: 128px;
     padding-top: 55px;
+    @media ${theme.media.desktop} {
+        @media ${theme.media.desktop} {
+            margin-top: 0;
+        }
+    }
 `
 const ImDescription = styled.p`
     margin: 8px 0 25px;
@@ -66,4 +74,9 @@ const DescriptionSkills = styled.span`
     width: 100%;
     text-align: start;
     line-height: 36px;
+`
+const Wrapper = styled.div`
+    @media ${theme.media.tablet} {
+       display: none;
+    }
 `

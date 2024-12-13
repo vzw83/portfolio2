@@ -16,12 +16,12 @@ const itemsServiceCard = [
     },
     {
         title: "WEB DEVELOPMENT",
-        iconId: "slider",
+        iconId: "webDev",
         text: "I create beautiful iterfaces with simple HTML, CSS, & JavaScript and also frameworks like Angular and ReactJS",
     },
     {
         title: "MOBILE DEVELOPMENT",
-        iconId: "slider",
+        iconId: "android",
         text: "I am an expert mobile developer. I have experience using Flutter and React Native.",
     },
     {
@@ -31,7 +31,7 @@ const itemsServiceCard = [
     },
     {
         title: "NPM AND NODEJS",
-        iconId: "slider",
+        iconId: "java",
         text: "I have core understanding of NPM. I can also develop general purpose applications with NodeJS",
     },
     {

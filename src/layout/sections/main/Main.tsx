@@ -12,9 +12,9 @@ import {theme} from "../../../styles/Theme";
 
 export const Main = () => {
     return (
-        <StyledMain>
+        <StyledMain id={"home"}>
             <Container>
-                <FlexWrapper justify={"space-between"} align={"center"} wrap={"wrap"}>
+                <FlexWrapper justify={"space-around"} align={"center"} wrap={"wrap"}>
                     <WrapperDescription>
                         <p>Hello, i’m</p>
                         <h4>Vladimir Zvyagincev</h4>
@@ -99,6 +99,16 @@ const WrapperPhoto = styled.div`
         right: 0;
         z-index: -1;
     }   
+    @media ${theme.media.desktop} {
+        img {
+            width: 300px;
+            height: 300px;
+        }
+        &::before {
+            width: 0;
+            height: 0;        
+        }
+    }
 `
 const ButtonWrapper = styled.div`
     margin-left: 32px;
@@ -117,4 +127,8 @@ const PlugComponent = styled.div`
     height: 128px;
     background-color: ${theme.colors.primaryBg};
     z-index: 2; /* Устанавливаем более высокий z-index */
+    @media ${theme.media.desktop} {
+        display: none;
+       
+    }
 `;

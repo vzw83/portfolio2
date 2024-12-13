@@ -4,9 +4,11 @@ import styled from "styled-components";
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {theme} from "../../styles/Theme";
+import {DesktopMenu} from "./menu/DesktopMenu";
+import {MobileMenu} from "./menu/MobileMenu";
 
 
-const menuItems = ["Home", "About me", "Projects", "Contact"]
+
 export const Header = () => {
     return (
         <StyledHeader>
@@ -15,18 +17,9 @@ export const Header = () => {
                     <Link href="">
                         <IconName>Vladimir</IconName>
                     </Link>
-
                     <NavMenu>
-                        <ListItem>
-                            {
-                                menuItems.map((item, index) => {
-                                    return (
-                                        <Item key={index}><Link href="">{item}</Link></Item>
-                                    )
-                                })
-                            }
-                        </ListItem>
-
+                        <DesktopMenu/>
+                        <MobileMenu/>
                     </NavMenu>
                 </FlexWrapper>
             </Container>
@@ -44,6 +37,7 @@ const StyledHeader = styled.header`
     right: 0;
     z-index: 99999;
     opacity: 0.98;
+   
 `
 const IconName = styled.a`
     font-weight: 600;
@@ -53,16 +47,7 @@ const IconName = styled.a`
 const NavMenu = styled.nav`
 
 `
-const ListItem = styled.ul`
-    display: flex;
 
-`
-const Item = styled.li`
-    & {
-        margin-left: 52px;
-    }
-
-`
 const Link = styled.a`
     font-weight: 600;
     font-size: 18px;

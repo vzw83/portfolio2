@@ -13,15 +13,15 @@ export const ProjectsCard = (props: Props) => {
     return (
         <StyledProjectsCard>
             <WrapperImg>
-                <img src={img} alt={title}/>
+                <Image src={img} alt={title}/>
             </WrapperImg>
 
             <ProjectTitle>{title}</ProjectTitle>
             <ProjectText>{text}</ProjectText>
-            <FlexWrapper justify={"space-around"}>
+            <WrapperButton >
                 <Button>View Live</Button>
                 <Button>Github Repo</Button>
-            </FlexWrapper>
+            </WrapperButton>
         </StyledProjectsCard>
     );
 };
@@ -44,7 +44,16 @@ const ProjectText = styled.p`
     font-size: 18px;
     margin: 5px 0 24px;
 `
+const Image = styled.img`
+    width: 100%;
+    //height: 260px;
+    object-fit: cover;
+`
 const WrapperImg = styled.div`
     margin-bottom: 16px;
 `
+const WrapperButton = styled.div`
+    display: flex;
+`
+
 

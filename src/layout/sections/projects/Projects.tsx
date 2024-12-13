@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {Container} from "../../../components/Container";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Title} from "../../../components/Title";
+import {theme} from "../../../styles/Theme";
 import {ProjectsCard} from "./projectsCard/ProjectsCard";
 import geo from "../../../assets/images/Rectangle 16.png"
 import livents from "../../../assets/images/Rectangle 17.png"
@@ -28,7 +29,7 @@ const projectItems = [
 ]
 export const Projects = () => {
     return (
-        <StyledProjects>
+        <StyledProjects id={"projects"}>
             <Container>
                 <Wrapper>
                     <Title>Featured projects:</Title>
@@ -50,6 +51,10 @@ export const Projects = () => {
 
 const StyledProjects = styled.section`
 padding-bottom: 128px;
+    @media ${theme.media.tablet} {
+        padding-bottom: 50px;
+        
+    }
 `
 const Wrapper = styled.div`
     padding: 80px 0 32px;

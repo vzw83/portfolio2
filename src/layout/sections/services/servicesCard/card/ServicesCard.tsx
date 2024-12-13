@@ -10,7 +10,7 @@ export const ServicesCard = (props: Props) => {
     return (
         <StyledServicesCard>
             <WrapperIcon>
-                <Icon iconId={props.service.iconId}/>
+                <Icon height={"55px"} width={"55x"} viewBox={"0 0 55 55"} iconId={props.service.iconId}/>
             </WrapperIcon>
 
             <Title>{props.service.title}</Title>
