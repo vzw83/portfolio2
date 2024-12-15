@@ -2,6 +2,7 @@
 import * as React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../../../../components/Icon";
+import {theme} from "../../../../../styles/Theme";
 
 type Props = {
     service: { title: string, iconId: string, text: string }
@@ -10,7 +11,7 @@ export const ServicesCard = (props: Props) => {
     return (
         <StyledServicesCard>
             <WrapperIcon>
-                <Icon height={"55px"} width={"55x"} viewBox={"0 0 55 55"} iconId={props.service.iconId}/>
+                <Icon height={"60"} width={"60"} viewBox={"0 0 62 62"} iconId={props.service.iconId}/>
             </WrapperIcon>
 
             <Title>{props.service.title}</Title>
@@ -20,6 +21,7 @@ export const ServicesCard = (props: Props) => {
 };
 
 const StyledServicesCard = styled.div`
+
     border: 3px solid #7562e0;
     border-radius: 16px;
     max-width: 341px;
@@ -29,6 +31,9 @@ const StyledServicesCard = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+
+    
 `
 const WrapperIcon = styled.div`
     padding-bottom: 11px;

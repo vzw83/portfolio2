@@ -19,8 +19,8 @@ export const ProjectsCard = (props: Props) => {
             <ProjectTitle>{title}</ProjectTitle>
             <ProjectText>{text}</ProjectText>
             <WrapperButton >
-                <Button>View Live</Button>
-                <Button>Github Repo</Button>
+                <Button width={"145px"}>View Live</Button>
+                <Button width={"145px"}>Github Repo</Button>
             </WrapperButton>
         </StyledProjectsCard>
     );
@@ -45,15 +45,30 @@ const ProjectText = styled.p`
     margin: 5px 0 24px;
 `
 const Image = styled.img`
-    width: 100%;
-    //height: 260px;
-    object-fit: cover;
+    width: 311px;
+    height: 173px;
+    object-fit: cover;   
 `
 const WrapperImg = styled.div`
     margin-bottom: 16px;
+    position: relative;
+    //z-index: 0;
+    &::before {
+        content: "";
+        position: absolute;
+
+        top: 0;
+        left: 0;
+        width: 311px;
+        height: 173px;
+        border-radius: 5px;
+        background: linear-gradient(180deg, rgba(24, 24, 36, 0.25) 0%, rgba(117, 98, 224, 0.5) 100%);
+        z-index: 1;
+    }
 `
 const WrapperButton = styled.div`
     display: flex;
+    justify-content: space-between;
 `
 
 

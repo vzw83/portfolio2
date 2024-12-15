@@ -42,7 +42,7 @@ export const Connect = () => {
                                 <Field placeholder={"Name:"}/>
                                 <Field placeholder={"Email:"}/>
                                 <Field as={"textarea"} placeholder={"Message:"}/>
-                                <Button type={"submit"}>Send</Button>
+                                <Button width={"174px"} type={"submit"}>Send</Button>
                             </FlexWrapper>
                         </Form>
                     </WrapperContact>
@@ -54,6 +54,7 @@ export const Connect = () => {
     );
 };
 const StyledConnect = styled.section`
+    padding-bottom: 50px;
 `
 const WrapperConnect = styled.div`
     display: flex;

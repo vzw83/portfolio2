@@ -1,4 +1,4 @@
-// @flow
+import {ReactNode} from "react";
 import * as React from "react";
 import {Link} from "react-scroll";
 import styled from "styled-components";
@@ -38,7 +38,7 @@ const Item = styled.li`
     margin: 0;
 `;
 
-const ScrollLink = styled<any>(Link as unknown as React.ComponentType)`
+const ScrollLink = styled<any>(Link)`
     font-weight: 600;
     font-size: 18px;
     color: ${theme.colors.font};

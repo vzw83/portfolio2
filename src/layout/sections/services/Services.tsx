@@ -21,7 +21,7 @@ const itemsServiceCard = [
     },
     {
         title: "MOBILE DEVELOPMENT",
-        iconId: "android",
+        iconId: "webDev",
         text: "I am an expert mobile developer. I have experience using Flutter and React Native.",
     },
     {
@@ -66,6 +66,14 @@ export const Service = () => {
 
 const StyledService = styled.section`
     padding-top: 80px;
+
+    div:nth-of-type(odd) {
+        border-color: ${theme.colors.accent};
+    }
+
+    div:nth-of-type(even) {
+        border-color: ${theme.colors.font};
+    }
 `
 const Wrapper = styled.div`
     padding-bottom: 32px;

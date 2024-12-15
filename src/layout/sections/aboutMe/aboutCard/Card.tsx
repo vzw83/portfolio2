@@ -12,7 +12,7 @@ export const Card = (props: Props) => {
     return (
         <StyledCard>
             <IconWrapper>
-                <Icon height={"42px"} width={"42px"} viewBox={"0 0 42 42"} iconId={props.card.iconId}/>
+                <Icon height={"60"} width={"60"} viewBox={"0 0 62 62"} iconId={props.card.iconId}/>
             </IconWrapper>
             <TitleCard>{props.card.title}</TitleCard>
         </StyledCard>
